@@ -1,23 +1,21 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SimpleCallback : MonoBehaviour
 {
-    private Action greetingAction;              //�׼� ����
+    private Action greetingAction;              //¾×¼Ç ¼±¾ð 
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        greetingAction = SayHello;              //Action �Լ� �Ҵ�
+        greetingAction = SayHello;              //Action ÇÔ¼ö ÇÒ´ç
         PerformGreeting(greetingAction);
     }
 
     void SayHello()
     {
-        Debug.Log("Hello, World!");
+        Debug.Log("Hello, world!");
     }
 
     void PerformGreeting(Action greetingFunc)

@@ -16,11 +16,11 @@ public class EventSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             score += 10;
-            OnScoreChanged?.Invoke(score);                          //스코어 변동시 호출
+            OnScoreChanged?.Invoke(score); ;                        //스코어 변동시 호출
         }
         if (score >= 100)
         {
-            OnGameOver?.Invoke();                                   //게임 오버시 호출
+            OnGameOver?.Invoke();                                   //게임 오버시 호출 
         }
     }
 }

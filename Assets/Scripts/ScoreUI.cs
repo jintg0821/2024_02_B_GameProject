@@ -9,7 +9,7 @@ public class ScoreUI : MonoBehaviour
         EventSystem.OnScoreChanged += UpdateScore;
         EventSystem.OnGameOver += ShowGameOver;
     }
-    private void OnDisable()                            //비활성화될때 이벤트 해체
+    private void OnDisable()                            //비활성화될때 이벤트 해제
     {
         EventSystem.OnScoreChanged -= UpdateScore;
         EventSystem.OnGameOver -= ShowGameOver;
@@ -19,7 +19,6 @@ public class ScoreUI : MonoBehaviour
     {
         Debug.Log($"Score update: {newScore}");
     }
-
     void ShowGameOver()
     {
         Debug.Log("Game Over!");
